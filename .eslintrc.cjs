@@ -10,5 +10,9 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json']
   },
-  rules: {}
+  rules: {
+    '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-misused-promises': 'off'
+  }
 }
