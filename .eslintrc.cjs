@@ -13,6 +13,20 @@ module.exports = {
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-misused-promises': 'off'
+    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/member-delimiter-style': [
+      'warn',
+      {
+        multiline: {
+          delimiter: 'none',
+          requireLast: true
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: false
+        },
+        multilineDetection: 'brackets'
+      }
+    ]
   }
 }
