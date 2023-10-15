@@ -16,7 +16,12 @@ async function search({ q }: { q: string }) {
   return data.products.filter((product) => {
     const title = product.title.toLowerCase()
     const description = product.description.toLowerCase()
-    return title.includes(parsedQ) ?? description.includes(parsedQ)
+    const category = product.category.toLowerCase()
+    return (
+      title.includes(parsedQ) ||
+      description.includes(parsedQ) ||
+      category.includes(parsedQ)
+    )
   })
 }
 
