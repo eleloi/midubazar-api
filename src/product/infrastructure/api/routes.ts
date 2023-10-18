@@ -21,7 +21,7 @@ export function createRouter() {
 
     const product = await getId({ repo: productRepo, id })
     if (product === null) {
-      res.status(404).json({ error: 'Product not found' })
+      res.sendStatus(404)
       return
     }
     res.json(product)
